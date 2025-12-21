@@ -14,28 +14,43 @@
         <div class="panel left-panel">
             <a href="../index.html" class="nav-back">← Volver al Menú</a>
 
-            <h2>🏗️ Lección 1: El Esqueleto</h2>
-            <p>Todo documento HTML necesita una estructura básica para que el navegador lo entienda. Esta estructura es
-                como el esqueleto humano; no se ve, pero sostiene todo.</p>
+            <!-- Seccion Teoria -->
+            <div class="theory-section">
+                <h2>🏗️ Lección 1: El Esqueleto</h2>
+                <p>Todo documento HTML necesita una estructura básica. Es el chasis del coche; sin él, las puertas y
+                    ruedas (tu contenido) se caerían.</p>
+                <div class="code-example">
+                    <code>
+                        &lt;!DOCTYPE html&gt;<br>
+                        &lt;html&gt;<br>
+                        &nbsp;&nbsp;&lt;body&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;...contenido...<br>
+                        &nbsp;&nbsp;&lt;/body&gt;<br>
+                        &lt;/html&gt;
+                    </code>
+                </div>
+            </div>
 
-            <h3>Tu Misión:</h3>
-            <p>Escribe la estructura mínima de un documento HTML5. Debe incluir:</p>
-            <ul>
-                <li><code>&lt;!DOCTYPE html&gt;</code></li>
-                <li><code>&lt;html&gt;</code></li>
-                <li><code>&lt;body&gt;</code></li>
-                <li>Un texto dentro del body que diga "Hola Mundo".</li>
-            </ul>
+            <hr class="separator">
 
-            <textarea id="code-input" spellcheck="false" placeholder="Escribe tu código aquí...">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;body&gt;
-    
-  &lt;/body&gt;
-&lt;/html&gt;</textarea>
+            <!-- Seccion Ejercicio -->
+            <div class="exercise-section">
+                <h3>⚡ Tu Turno (Challenge)</h3>
+                <p>No copies y pegues. <strong>Escribe de memoria</strong> la estructura completa.</p>
+                <ul class="requirements-list">
+                    <li>Declara el <code>DOCTYPE</code>.</li>
+                    <li>Abre y cierra <code>html</code>.</li>
+                    <li>Crea el <code>body</code>.</li>
+                    <li>Escribe "Hola Mundo" dentro.</li>
+                </ul>
 
-            <div class="controls">
-                <button id="run-btn" class="btn-primary">▶ Ejecutar Código</button>
+                <textarea id="code-input" spellcheck="false"
+                    placeholder="<!-- El lienzo está en blanco. ¡Empieza a escribir! -->"></textarea>
+
+                <div class="controls">
+                    <button id="run-btn" class="btn-primary">▶ Ejecutar Código</button>
+                    <button onclick="location.reload()" class="btn-secondary">↺ Reiniciar</button>
+                </div>
             </div>
 
             <div id="feedback"></div>
