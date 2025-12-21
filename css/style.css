@@ -1,0 +1,156 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#app {
+    text-align: center;
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    color: #ffd700;
+    /* Gold for Jophiel (Wisdom) */
+}
+
+a {
+    color: #4da6ff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+    background: #2a2a2a;
+    padding: 15px;
+    border-radius: 8px;
+    transition: transform 0.2s;
+}
+
+
+/* Lesson Layout */
+.lesson-container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.panel {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.left-panel {
+    border-right: 2px solid #333;
+    background: #1e1e1e;
+    max-width: 40%;
+}
+
+.right-panel {
+    background: #fff;
+    /* White background for preview */
+    color: #000;
+    padding: 0;
+}
+
+/* Editor Area */
+textarea#code-input {
+    width: 100%;
+    height: 300px;
+    background: #2d2d2d;
+    color: #f8f8f2;
+    border: 1px solid #444;
+    border-radius: 4px;
+    padding: 10px;
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 14px;
+    resize: none;
+    margin-top: 10px;
+}
+
+textarea#code-input:focus {
+    outline: 2px solid #ffd700;
+}
+
+/* Controls */
+.controls {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+button.btn-primary {
+    background: #ffd700;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+button.btn-primary:hover {
+    background: #ffed4a;
+}
+
+/* Preview Area */
+iframe#preview-frame {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: #fff;
+}
+
+/* Feedback */
+#feedback {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 4px;
+    font-weight: bold;
+    display: none;
+    /* Hidden by default */
+}
+
+.success {
+    background: #155724;
+    color: #d4edda;
+    border: 1px solid #c3e6cb;
+}
+
+.error {
+    background: #721c24;
+    color: #f8d7da;
+    border: 1px solid #f5c6cb;
+}
+
+/* Navigation */
+.nav-back {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #888;
+    font-size: 0.9rem;
+}

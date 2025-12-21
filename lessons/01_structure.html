@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lección 1: Estructura Básica - Jophiel</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div class="lesson-container">
+        <!-- Panel Izquierdo: Instrucciones y Editor -->
+        <div class="panel left-panel">
+            <a href="../index.html" class="nav-back">← Volver al Menú</a>
+
+            <h2>🏗️ Lección 1: El Esqueleto</h2>
+            <p>Todo documento HTML necesita una estructura básica para que el navegador lo entienda. Esta estructura es
+                como el esqueleto humano; no se ve, pero sostiene todo.</p>
+
+            <h3>Tu Misión:</h3>
+            <p>Escribe la estructura mínima de un documento HTML5. Debe incluir:</p>
+            <ul>
+                <li><code>&lt;!DOCTYPE html&gt;</code></li>
+                <li><code>&lt;html&gt;</code></li>
+                <li><code>&lt;body&gt;</code></li>
+                <li>Un texto dentro del body que diga "Hola Mundo".</li>
+            </ul>
+
+            <textarea id="code-input" spellcheck="false" placeholder="Escribe tu código aquí...">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;body&gt;
+    
+  &lt;/body&gt;
+&lt;/html&gt;</textarea>
+
+            <div class="controls">
+                <button id="run-btn" class="btn-primary">▶ Ejecutar Código</button>
+            </div>
+
+            <div id="feedback"></div>
+        </div>
+
+        <!-- Panel Derecho: Preview -->
+        <div class="panel right-panel">
+            <iframe id="preview-frame"></iframe>
+        </div>
+    </div>
+
+    <script src="../js/engine.js"></script>
+    <script>
+        // Lógica de validación específica para esta lección
+        function validateLesson(code) {
+            code = code.toLowerCase();
+
+            if (!code.includes('<!doctype html>')) {
+                showFeedback("❌ Falta la declaración del DOCTYPE al principio.", "error");
+                return;
+            }
+            if (!code.includes('<html>') || !code.includes('</html>')) {
+                showFeedback("❌ Asegúrate de tener las etiquetas <html> de apertura y cierre.", "error");
+                return;
+            }
+            if (!code.includes('<body>') || !code.includes('</body>')) {
+                showFeedback("❌ Falta el cuerpo del documento (<body>).", "error");
+                return;
+            }
+            if (!code.includes('hola mundo')) {
+                showFeedback("⚠️ No veo el texto 'Hola Mundo' dentro del body.", "error");
+                return;
+            }
+
+            showFeedback("🎉 ¡Excelente! Has creado tu primer documento HTML válido.", "success");
+        }
+    </script>
+</body>
+
+</html>
